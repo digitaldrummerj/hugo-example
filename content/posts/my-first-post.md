@@ -1,7 +1,7 @@
 ---
 categories: [""]
 date: 2022-02-14T10:27:17-07:00
-draft: true
+draft: false
 title: "First Post"
 ---
 
