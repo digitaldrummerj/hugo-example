@@ -1,8 +1,8 @@
 ---
 categories: [""]
-date: {{ .Date }}
+date: 2022-02-16T18:02:16-07:00
 draft: true
-title: "{{ replace .Name "-" " " | title }}"
+title: "Pr Test"
 ---
 
 **Replace with Summary to Display**
