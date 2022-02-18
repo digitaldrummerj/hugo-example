@@ -1,7 +1,6 @@
 ---
 categories: [""]
 date: {{ .Date }}
-published: false
 draft: true
 title: "{{ replace .Name "-" " " | title }}"
 ---
