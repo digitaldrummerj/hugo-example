@@ -21,4 +21,3 @@ command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
 [context.staging.environment]
 HUGO_VERSION = "0.92.1"
-
