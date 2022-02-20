@@ -1,0 +1,40 @@
+{{ define "main" }}
+
+    <!-- Page Header -->
+    <header class="intro-header" style="background-image: url('{{ .Site.BaseURL }}{{ .Site.Params.defaultHeaderImage }}')">
+     <div class="container">
+       <div class="row">
+         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+           <div class="site-heading">
+             <h1>{{ .Title }}</h1>
+             <hr class="small">
+             <span class="subheading">{{ .Description }}</span>
+           </div>
+         </div>
+       </div>
+     </div>
+    </header>
+
+ <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                {{ .Content }}
+                <div>
+                    {{ range (.Site.RegularPages.GroupByDate "January 2006")  }}
+                        {{ if (where .Pages "Section" "posts") }}
+                            <h2>{{ .Key }}</h2>
+                            <ul class="list-group striped-list">
+                                {{ range ((where .Pages "Section" "posts")) }}
+                                    <li class="list-group-item">
+                                        <a href="{{ .RelPermalink }}">{{ .PublishDate.Format "Jan 02" }} : {{ .Title }}</a>
+                                    </li>
+                                {{ end }}
+                            </ul>
+                        {{ end }}
+                    {{ end }}
+                </div>
+           </div>
+        </div>
+    </div>
+{{ end }}
